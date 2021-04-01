@@ -62,11 +62,11 @@ Result servicesInit(void)
 
     Logger::getInstance().log(Logger::INFO, "Checkpoint loading started...");
 
-    Handle hbldrHandle;
+    /*Handle hbldrHandle;
     if (R_FAILED(res = svcConnectToPort(&hbldrHandle, "hb:ldr"))) {
         Logger::getInstance().log(Logger::ERROR, "Error during startup with result 0x%08lX. Rosalina not found on this system.", res);
         return consoleDisplayError("Rosalina not found on this system.\nAn updated CFW is required to launch Checkpoint.", res);
-    }
+    }*/
 
     romfsInit();
     ATEXIT(romfsExit);
